@@ -1,0 +1,20 @@
+/* 引入组件样式 */
+@import './miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
+@import './styles/icon.wxss';
+/* 清除默认样式 */
+page,view,text,swiper,swiper-item,image,navigator,checkbox,checkbox-group {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} 
+
+/* 主题颜色 */
+page {
+  --themeColor: #eb4450;
+}
+
+/* 图片默认宽度 */
+
+image {
+  width: 100%;
+}

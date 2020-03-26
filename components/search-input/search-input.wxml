@@ -1,0 +1,5 @@
+
+<!-- 搜索组件 -->
+<view class="search">
+    <navigator url='/pages/search/index'>搜索</navigator>
+</view>

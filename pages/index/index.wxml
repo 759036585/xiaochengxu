@@ -1,0 +1,49 @@
+<!-- 搜索框 -->
+<view>
+    <search-input></search-input>
+</view>
+<!-- 轮播图 -->
+<view class="swiper_box">
+    <swiper class="swiper_box" indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" circular="{{true}}" duration="{{2000}}">
+        <block wx:for="{{swiperData}}" wx:key="goods_id">
+            <navigator url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+                <swiper-item>
+                    <image class="swiper-image" src="{{item.image_src}}" />
+                </swiper-item>
+            </navigator>
+        </block>
+    </swiper>
+</view>
+<!-- 导航栏 -->
+<view class="daohang">
+    <block wx:for="{{catItemsData}}" wx:key="name" >
+        <view class="daohang_item" bindtap="handleDaohang" data-index="{{index}}" >
+            <image src="{{item.image_src}}" mode="widthFix" />
+        </view>
+    </block>
+</view>
+<!-- 楼层区 -->
+<view class="floor">
+    <view 
+    wx:for="{{floorData}}"
+    wx:key="floor_title"
+    class="floor_group">
+        <view class="floor_title">
+            <image src="{{item.floor_title.image_src}}" mode="widthFix"/>
+        </view>
+        <view class="product_list">
+            <navigator 
+            wx:key="name"
+            wx:for="{{item.product_list}}">
+                <image src="{{item.image_src}}" mode="{{ index === 0 ? 'widthFix' : 'scaleToFill' }}" />
+            </navigator>
+        </view>
+    </view>
+</view>
+
+<!-- 回到顶部按钮 -->
+
+<view class="top" hidden="{{isHidden}}" bindtap="toTop">
+    <view class="iconfont .icon-dingbu"></view>
+    <view >顶部</view>
+</view>

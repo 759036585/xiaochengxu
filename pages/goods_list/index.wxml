@@ -1,0 +1,26 @@
+
+<!-- 搜索框 -->
+<search-input></search-input>
+
+<Tabs tabs="{{tabs}}" bindtabIndex="handleTab">
+    <block wx:if="{{tabs[0].isActive}}">
+        <navigator class="goods_list"  
+        wx:for="{{goodsList}}" 
+        url="/pages/goods_detail/index?goods_id={{item.goods_id}}"
+        wx:key="goods_id">
+            <view class="list_left">
+                <image src="{{item.goods_small_logo}}" mode="widthFix"/>
+            </view>
+            <view class="list_right">
+                <view class="rg_top">{{item.goods_name}}</view>
+                <view class="rg_bottom">￥{{item.goods_price}}</view>
+            </view>
+        </navigator>
+    </block>
+    <block wx:elif="{{tabs[1].isActive}}">
+        <view>2</view>
+    </block>
+    <block wx:else="{{tabs[2].isActive}}">
+        <view>3</view>
+    </block>
+</Tabs>

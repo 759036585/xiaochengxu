@@ -1,0 +1,32 @@
+
+
+.goods_list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4rpx solid #ccc;
+    height: 300rpx;
+    .list_left {
+        flex: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        image {
+            width: 80%;
+        }
+    }
+    .list_right {
+        flex: 4;
+        word-break: break-all;
+        .rg_top {
+            margin-bottom: 50rpx;
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+    }
+        .rg_bottom {
+            color: var(--themeColor);
+        }
+    }
+}

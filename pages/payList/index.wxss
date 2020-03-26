@@ -1,0 +1,19 @@
+.dingdan {
+  height: 200rpx;
+  border-bottom: 4rpx solid #eee;
+  display: flex;
+  flex-direction: column;
+}
+.dingdan view {
+  padding: 0 20rpx;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dingdan view text {
+  display: flex;
+}
+.dingdan view .price {
+  color: var(--themeColor);
+}

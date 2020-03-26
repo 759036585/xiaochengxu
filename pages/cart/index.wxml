@@ -1,0 +1,53 @@
+<!-- 获取地址信息 -->
+<view class="address">
+    <view class="btn_address" wx:if="{{!address.userName}}">
+        <button type="primary" bindtap="getAddress">获取地址</button>
+    </view>
+    <view class="userInfo" wx:else>
+        <view class="userInfo_left">
+            <text >姓名: {{address.userName}}</text>
+            <text >地址: {{address_str}}</text>
+        </view>
+        <view class="userInfo_right">电话: {{address.telNumber}}</view>
+    </view>
+</view>
+
+<!-- 购物车标题 -->
+<view class="cart_title">购物车</view>
+
+<!-- 购物车列表 -->
+<block wx:for="{{cartData}}" wx:key="goods_id">
+    <view class="cart_list">
+        <view class="left_check">
+            <checkbox-group  bindtap="handleCheckChange" data-id="{{item.goods_id}}">
+                <checkbox  checked="{{item.checked}}" />
+            </checkbox-group>
+        </view>
+        
+        <navigator class="mid_img" url="/pages/goods_detail/index?goods_id={{item.goods_id}}">
+            <image src="{{item.goods_small_logo}}" mode="widthFix"/>
+        </navigator>
+        <view class="right_info">
+            <view class="info_top">{{item.goods_name}}</view>
+            <view class="info_bottom">
+                <text class="price">￥{{item.goods_price}}</text>
+                <text class="jianNum" data-operation="{{-1}}" data-id ="{{item.goods_id}}" bindtap="changeNum">-</text>
+                <text class="num">{{item.goods_num}}</text>
+                <text class="addNum" data-operation="{{1}}" data-id ="{{item.goods_id}}" bindtap="changeNum">+</text>
+            </view>
+        </view>
+    </view>
+</block>
+
+<view class="btm">
+    <checkbox-group bindtap="handleAllCheck">
+        <checkbox  checked="{{allChecked}}" />全选
+    </checkbox-group>
+
+    <view class="btm_price">
+        <view >合计：<i>￥{{totalPrice}}</i></view>
+        <view >包含运费</view>
+    </view>
+    <view class="jiesuan" bindtap="handlePay">结算({{totalNum}})</view>
+
+</view>

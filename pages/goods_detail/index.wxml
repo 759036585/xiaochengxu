@@ -1,0 +1,56 @@
+<!-- 轮播图 -->
+    <view>
+        <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" duration="{{500}}" circular="{{true}}">
+        <block wx:for="{{swiperList}}" wx:key="pics_id">
+            <swiper-item bindtap="imageChange" data-url="{{item.pics_mid}}" >
+                <image class="swiper-image" src="{{item.pics_mid}}" mode="widthFix"/>
+            </swiper-item>
+        </block>
+    </swiper>
+    </view>
+
+    <!-- 价格 -->
+    <view class="price" >￥{{GoodsDetailList.goods_price}}</view>
+
+    <!-- 商品标题 -->
+
+    <view class="title">
+        <view class="title_left">{{GoodsDetailList.goods_name}}</view>
+        <view class="title_right">
+            <text class="iconfont icon-shoucang"></text>
+            <text >收藏</text>
+        </view>
+    </view>
+
+    <!-- 内容标题 -->
+    <view class="content_title">图文详情</view>
+
+    <!-- 富文本内容 -->
+    <rich-text nodes="{{GoodsDetailList.goods_introduce}}"></rich-text>
+
+    <!-- 底部tab -->
+
+    <view class="bottom">
+        <view class="btm_left">
+            <view >
+                <text class="iconfont icon-kefu"></text>
+                <text >联系客服</text>
+                <button open-type="contact"></button>
+            </view>
+            <view >
+                <text class="iconfont icon-fenxiang2"></text>
+                <text >分享</text>
+                <button open-type="share"></button>
+            </view>
+            <view >
+                <text class="iconfont icon-gouwuchekong"></text>
+                <text bindtap="handleToCart">购物车</text>
+            </view>
+        </view>
+        <view class="btm_right">
+            <view bindtap="handleAddCart">添加购物车</view>
+             <view >结算</view>
+        </view>
+    </view>
+
+      

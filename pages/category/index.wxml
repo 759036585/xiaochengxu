@@ -1,0 +1,34 @@
+
+<!-- 搜索框组件 -->
+<search-input></search-input>
+
+<view class="category">
+    <!-- 左面标题滚动区域 -->
+    <scroll-view class="category_left" scroll-y="{{true}}">
+        <view 
+            wx:for="{{CategoryLeftList}}"
+            wx:key="*this"
+            data-index="{{index}}" 
+            bindtap="handleCates" 
+            class="category_lf_title {{activeIndex === index ? 'active' : ''}}">
+            {{item}}
+        </view>
+    </scroll-view>
+    <!-- 右面内容滚动区域 -->
+    <scroll-view scroll-y="{{true}}" class="category_right" scroll-top="{{scrollTop}}">
+        <block wx:for="{{CategoryRightList}}" wx:key="cat_id">
+            <view class="category_rg_title">
+                <text decode="{{true}}" style="color: #eee">/&emsp;</text>
+                <text style="color: #222">{{item.cat_name}}</text>
+                <text decode="{{true}}" style="color: #eee">&emsp;/</text>
+            </view>
+            <!-- 商品展示区 -->
+            <view class="category_rg_content" >
+                <navigator wx:for="{{item.children}}" wx:key="cat_id" url="/pages/goods_list/index?cat_id={{item.cat_id}}&cat_name={{item.cat_name}}">
+                    <image src="{{item.cat_icon}}" mode="widthFix"></image>
+                    <view >{{item.cat_name}}</view>
+                </navigator>
+            </view>
+        </block>
+    </scroll-view>
+</view>

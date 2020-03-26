@@ -1,0 +1,128 @@
+page{
+    padding-bottom: 90rpx;
+}
+
+.address {
+    height: 150rpx;
+    background-color: rgba(0, 0, 0, .1);
+    .btn_address {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40rpx;
+        button {
+            color: #fff;
+        }
+    }
+    .userInfo {
+        display: flex;
+        padding-top: 30rpx;
+        .userInfo_left {
+            flex: 4;
+            display: flex;
+            flex-direction: column;
+            font-size: 24rpx;
+            padding-left: 10rpx;
+            
+        }
+        .userInfo_right {
+            flex: 2;
+            font-size: 24rpx;
+        }
+    }
+}
+.cart_title {
+    height: 100rpx;
+    line-height: 100rpx;
+    color: var(--themeColor);
+    font-size: 36rpx;
+    font-weight: 600;
+    padding-left: 20rpx;
+    border-top: 4rpx solid var(--themeColor);
+    border-bottom: 4rpx solid var(--themeColor);
+}
+
+.cart_list {
+    display: flex;
+    height: 300rpx;
+    align-items: center;
+    border-bottom: 4rpx solid #ccc;
+    .left_check {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+    .mid_img {
+        flex: 2;
+    }
+    .right_info {
+        flex: 5;
+        margin-left: 20rpx;
+        word-break: break-all;
+        .info_top {
+            display: -webkit-box;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+        }
+        .info_bottom {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 40rpx;
+            text:nth-child(1){
+                color: var(--themeColor);
+            }
+            text:nth-child(2){
+                border: 4rpx solid #ccc;
+                padding: 5rpx 20rpx;
+            }
+            text:nth-child(3){
+            }
+            text:nth-child(4){
+                border: 4rpx solid #ccc;
+                padding: 5rpx 16rpx;
+            }
+        }
+    }
+}
+
+.btm {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 90rpx;
+    display: flex;
+    align-items: center;
+    checkbox-group{ 
+        margin-left: 10rpx;
+        flex: 2;
+        font-size: 30rpx;
+    }
+    .btm_price {
+        flex: 7;
+        text-align: right;
+        margin-right: 10rpx;
+        view:nth-child(1) {
+            i {
+                color: var(--themeColor);
+            }
+        }
+        view:nth-child(2) {
+            font-size: 24rpx;
+            color: #222;
+        }
+    }
+    .jiesuan {
+        flex: 3;
+        height: 90rpx;
+        line-height: 90rpx;
+        text-align: center;
+        font-weight: 600;
+        background-color: red;
+        color: #fff;
+    }
+}

@@ -1,0 +1,64 @@
+<view class="box">
+  <view class="b_top">
+    <image src="../../assets/TabbarImg/bgc.jpg" class="image"/>
+     <view class="b_t_img" wx:if="{{userInfo.nickName}}">
+      <image src="{{userInfo.avatarUrl}}"/>
+      <view class="b_t_name">{{userInfo.nickName}}</view>
+    </view>
+    <view class="login" wx:else>
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" plain="{{true}}">登录</button>
+    </view>
+    <view class="ab_box">
+      <view class="ab_box_nav">
+        <view >
+          <text >0</text>
+          <text >收藏中的店铺</text>
+        </view>
+        <view >
+          <text >0</text>
+          <text >收藏的商品</text>
+        </view>
+        <view >
+          <text >0</text>
+          <text >关注的商品</text>
+        </view>
+        <view >
+          <text >0</text>
+          <text >我的足迹</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="b_bottom">
+    <view class="dingdan">
+      <view class="dd_title">我的订单</view>
+      <view class="dd_main">
+        <navigator url="/pages/payList/index">
+          <text class="iconfont icon-quanbudingdan"></text>
+           <text >全部订单</text>
+        </navigator>
+        <navigator >
+          <text class="iconfont icon--"></text>
+           <text >待付款</text>
+        </navigator>
+        <navigator >
+          <text class="iconfont icon-daishouhuo"></text>
+           <text >待收货</text>
+        </navigator>
+        <navigator >
+          <text class="iconfont icon-icon"></text>
+           <text >退款/退货</text>
+        </navigator>
+      </view>
+    </view>
+    <navigator class="adress">收获地址管理</navigator>
+    <view class="bottom">
+      <view class="kefu">
+        <text >联系客服</text>
+         <text >400-618-4000</text>
+      </view>
+      <view class="fankui">意见反馈</view>
+      <view class="guanyu">关于我们</view>
+    </view>
+  </view>
+</view>

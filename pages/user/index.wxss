@@ -1,0 +1,131 @@
+.box {
+  font-size: 26rpx;
+  background-color: rgba(236, 236, 236, 0.3);
+}
+.box .b_top {
+  height: 45vh;
+  box-sizing: border-box;
+  position: relative;
+}
+.box .b_top .image {
+  height: 45vh;
+  filter: blur(5rpx);
+}
+.box .b_top .login {
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.box .b_top .login button {
+  width: 200rpx;
+  height: 100rpx;
+  color: #fff;
+}
+.box .b_top .b_t_img {
+  position: absolute;
+  text-align: center;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.box .b_top .b_t_img image {
+  width: 100%;
+  height: 100%;
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.box .b_top .b_t_img .b_t_name {
+  margin-top: 50rpx;
+  color: #fff;
+}
+.box .b_top .ab_box {
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  height: 100rpx;
+  width: 90%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  box-shadow: 0rpx 0rpx 10rpx 10rpx rgba(0, 0, 0, 0.3);
+}
+.box .b_top .ab_box .ab_box_nav {
+  height: 100%;
+  display: flex;
+}
+.box .b_top .ab_box .ab_box_nav view {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: #999;
+}
+.box .b_top .ab_box .ab_box_nav view text:first-child {
+  color: var(--themeColor);
+}
+.box .b_bottom {
+  height: 50vh;
+}
+.box .b_bottom .dingdan {
+  height: 180rpx;
+  margin: 70rpx auto;
+  margin-bottom: 20rpx;
+  width: 90%;
+  background-color: #fff;
+}
+.box .b_bottom .dingdan .dd_title {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: #999;
+  padding-left: 20rpx;
+  border-bottom: 4rpx solid #eee;
+}
+.box .b_bottom .dingdan .dd_main {
+  display: flex;
+}
+.box .b_bottom .dingdan .dd_main navigator {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.box .b_bottom .dingdan .dd_main navigator .iconfont {
+  color: var(--themeColor);
+  font-size: 34rpx;
+}
+.box .b_bottom .adress {
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: 0 auto;
+  background-color: #fff;
+  width: 90%;
+  padding-left: 20rpx;
+  color: 30rpx;
+  color: #999;
+  margin-bottom: 20rpx;
+}
+.box .b_bottom .bottom {
+  margin: 0 auto;
+  width: 90%;
+}
+.box .b_bottom .bottom .kefu,
+.box .b_bottom .bottom .fankui,
+.box .b_bottom .bottom .guanyu {
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 4rpx solid #eee;
+  background-color: #fff;
+  padding-left: 20rpx;
+  color: #999;
+  font-size: 30rpx;
+}
+.box .b_bottom .bottom .kefu {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20rpx;
+}
